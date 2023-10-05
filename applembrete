@@ -1,0 +1,49 @@
+import Foundation
+
+struct Lembrete {
+    var titulo: String
+    var concluido: Bool
+}
+
+
+import UIKit
+
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
+    
+    var lembretes: [Lembrete] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    @IBAction func adicionarLembrete(_ sender: UIButton) {
+        if let titulo = textField.text, !titulo.isEmpty {
+            let lembrete = Lembrete(titulo: titulo, concluido: false)
+            lembretes.append(lembrete)
+            tableView.reloadData()
+            textField.text = ""
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lembretes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LembreteCell", for: indexPath)
+        let lembrete = lembretes[indexPath.row]
+        cell.textLabel?.text = lembrete.titulo
+        cell.accessoryType = lembrete.concluido ? .checkmark : .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        lembretes[indexPath.row].concluido.toggle()
+        tableView.reloadData()
+    }
+}
