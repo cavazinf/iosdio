@@ -1,0 +1,51 @@
+Passo 1: Instale o Xcode (se ainda não estiver instalado)
+
+Certifique-se de que você tenha o Xcode instalado em seu Mac. Você pode baixá-lo gratuitamente na App Store ou no site oficial da Apple.
+
+Passo 2: Abra o Xcode
+
+Após instalar o Xcode, abra-o. Você verá a tela de boas-vindas.
+
+Passo 3: Crie um Novo Playground
+
+Para criar um novo projeto Playground, siga estas etapas:
+
+No menu superior, clique em "File" (Arquivo).
+
+Em seguida, selecione "New" (Novo) e depois "Playground" (Playground).
+
+Uma janela de diálogo será exibida. Você pode escolher um local para salvar o Playground e dar um nome a ele.
+
+Em "Platform" (Plataforma), selecione "iOS."
+
+Escolha a opção "Blank" (Branco) ou qualquer outro modelo que desejar para o Playground.
+
+Clique no botão "Create" (Criar).
+
+Passo 4: Comece a Programar
+
+Agora você está pronto para começar a programar no Playground. Você verá uma tela dividida com uma área de código à esquerda e uma área de resultado à direita. 
+Você pode escrever 
+código Swift na área de código e ver os resultados imediatamente na área de resultado.
+
+Por exemplo, você pode digitar o seguinte código de exemplo na área de código:
+
+swift
+Copy code
+import UIKit
+
+var str = "Olá, Mundo!"
+print(str)
+Depois de digitar o código, você verá a saída "Olá, Mundo!" na área de resultado.
+
+Passo 5: Salve o Playground
+
+Lembre-se de salvar seu projeto Playground regularmente. Você pode fazer isso clicando em "File" (Arquivo) e escolhendo "Save" (Salvar). 
+Dê um nome ao seu Playground e escolha a localização onde deseja salvá-lo.
+Clique no botão "Create" (Criar).
+
+swift
+import UIKit
+
+var str = "Olá, Mundo!"
+print(str)
