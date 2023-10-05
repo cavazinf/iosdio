@@ -1,0 +1,10 @@
+import Swift
+
+// Função principal
+func main() {
+    // Imprime "Olá, Mundo!" no console
+    print("Olá, Mundo!")
+}
+
+// Chama a função principal
+main()
